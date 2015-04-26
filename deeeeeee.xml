@@ -16,28 +16,33 @@
           <block type="oled_drawtext" id="252">
             <field name="TEXT">armed and working</field>
             <next>
-              <block type="controls_repeat" id="40" inline="true">
-                <value name="TIMES">
-                  <block type="math_number" id="154">
-                    <field name="NUM">9999</field>
-                  </block>
-                </value>
-                <statement name="DO">
-                  <block type="movement_forward" id="67">
-                    <next>
-                      <block type="robot_delay" id="101" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="146">
-                            <field name="NUM">5000</field>
-                          </block>
-                        </value>
+              <block type="oled_color" id="310">
+                <field name="OBJECT">GREEN</field>
+                <next>
+                  <block type="controls_repeat" id="40" inline="true">
+                    <value name="TIMES">
+                      <block type="math_number" id="154">
+                        <field name="NUM">9999</field>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="movement_forward" id="67">
                         <next>
-                          <block type="movement_reverse" id="219"></block>
+                          <block type="robot_delay" id="101" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="146">
+                                <field name="NUM">5000</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="movement_reverse" id="219"></block>
+                            </next>
+                          </block>
                         </next>
                       </block>
-                    </next>
+                    </statement>
                   </block>
-                </statement>
+                </next>
               </block>
             </next>
           </block>
