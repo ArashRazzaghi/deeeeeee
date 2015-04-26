@@ -17,7 +17,7 @@
             <field name="TEXT">armed and working</field>
             <next>
               <block type="oled_color" id="310">
-                <field name="OBJECT">GREEN</field>
+                <field name="OBJECT">BLACK</field>
                 <next>
                   <block type="controls_repeat" id="40" inline="true">
                     <value name="TIMES">
