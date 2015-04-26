@@ -1,31 +1,31 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="oled_cleardisplay" id="234" x="5" y="-33">
-    <next>
-      <block type="oled_setcursor" id="243" inline="true">
-        <value name="STARTX">
-          <block type="math_number" id="280">
-            <field name="NUM">10</field>
-          </block>
-        </value>
-        <value name="STARTY">
-          <block type="math_number" id="281">
-            <field name="NUM">10</field>
-          </block>
-        </value>
+  <block type="controls_repeat" id="40" inline="true" x="12" y="-172">
+    <value name="TIMES">
+      <block type="math_number" id="154">
+        <field name="NUM">9999</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="oled_cleardisplay" id="234">
         <next>
-          <block type="oled_drawtext" id="252">
-            <field name="TEXT">armed and working</field>
+          <block type="oled_setcursor" id="243" inline="true">
+            <value name="STARTX">
+              <block type="math_number" id="280">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+            <value name="STARTY">
+              <block type="math_number" id="281">
+                <field name="NUM">10</field>
+              </block>
+            </value>
             <next>
-              <block type="oled_color" id="310">
-                <field name="OBJECT">BLACK</field>
+              <block type="oled_drawtext" id="252">
+                <field name="TEXT">armed and working</field>
                 <next>
-                  <block type="controls_repeat" id="40" inline="true">
-                    <value name="TIMES">
-                      <block type="math_number" id="154">
-                        <field name="NUM">9999</field>
-                      </block>
-                    </value>
-                    <statement name="DO">
+                  <block type="oled_color" id="310">
+                    <field name="OBJECT">BLACK</field>
+                    <next>
                       <block type="movement_forward" id="67">
                         <next>
                           <block type="robot_delay" id="101" inline="true">
@@ -40,7 +40,7 @@
                           </block>
                         </next>
                       </block>
-                    </statement>
+                    </next>
                   </block>
                 </next>
               </block>
@@ -48,6 +48,6 @@
           </block>
         </next>
       </block>
-    </next>
+    </statement>
   </block>
 </xml>
